@@ -1,0 +1,217 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
+
+  .section {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 12px;
+
+    .paragraph {
+      color: #616161;
+    }
+  }
+
+  &__sectionTitle {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.howToStart {
+  display: flex;
+  gap: 20px;
+
+  &__title {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .paragraph {
+    margin-bottom: 12px;
+    line-height: 100%;
+  }
+
+  &__image {
+    width: 130px;
+    flex-shrink: 0;
+  }
+
+  &__button {
+    border-radius: 8px;
+    width: 116px;
+    height: 36px;
+    background: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+  }
+
+  &__buttonTitle {
+    font-weight: 700;
+    color: var(--light);
+  }
+}
+
+.bonuses {
+  &__title {
+    margin-bottom: 22px;
+    line-height: 106%;
+  }
+  &__bookmakersList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__bookmaker {
+    padding: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    width: 320px;
+    height: 56px;
+    background-color: var(--dark-soft);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .paragraph {
+    line-height: 129%;
+  }
+
+  &__button {
+    border-radius: 6px;
+    width: 80px;
+    height: 36px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    color: var(--light);
+    text-decoration: none;
+  }
+}
+
+.guess {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    line-height: 99%;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--primary);
+  }
+
+  &__bet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__team {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: var(--dark-soft);
+    padding-bottom: 12px;
+    color: var(--grey);
+    position: relative;
+
+    > * {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    &.parimatch {
+      background: #f2bc0033;
+    }
+
+    &.bet365 {
+      background: rgba(51, 182, 60, 0.2);
+    }
+  }
+
+  &__bookmaker {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    gap: 5px;
+    background: var(--dark-soft);
+    width: 100px;
+    height: 30px;
+    border-radius: 32px;
+    padding: 5px 10px 5px 5px;
+
+    &.parimatch {
+      background: rgba(242, 188, 0, 0.2);
+
+      .guess__ratio {
+        color: #f2bc00;
+      }
+    }
+    &.bet365 {
+      background: rgba(51, 182, 60, 0.2);
+
+      .guess__ratio {
+        color: var(--primary);
+      }
+    }
+  }
+
+  &__ratio {
+    font-weight: 700;
+    font-size: 12px;
+
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__bookmakerLogo {
+    height: 20px;
+    width: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__equals {
+    opacity: 0.5;
+    font-size: 62px;
+    text-align: center;
+    line-height: 70px;
+  }
+
+  &__bottomTitle {
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+    opacity: 0.5;
+  }
+}
